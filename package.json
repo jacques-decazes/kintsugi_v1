@@ -1,0 +1,42 @@
+{
+  "name": "cptn_next_starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev-m": "next dev -H 192.168.1.29 -p 3000",
+    "build": "next build",
+    "postbuild": "next-sitemap && next-on-netlify",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@svgr/webpack": "^5.5.0",
+    "fontsource-kanit": "^3.0.9",
+    "fontsource-montserrat": "^3.0.9",
+    "fontsource-public-sans": "^3.0.3",
+    "framer-motion": "^2.9.5",
+    "geomanist": "^0.0.3",
+    "gsap": "^3.6.0",
+    "next": "10.0.3",
+    "next-on-netlify": "^2.6.3",
+    "next-seo": "^4.17.0",
+    "next-sitemap": "^1.3.10",
+    "prismic-javascript": "^3.0.2",
+    "prismic-reactjs": "^1.3.3",
+    "react": "17.0.1",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-device-detect": "^1.14.0",
+    "react-dom": "17.0.1",
+    "react-intersection-observer": "^8.31.0",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
+    "react-use-dimensions": "^1.2.1",
+    "sass": "^1.29.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
+  }
+}

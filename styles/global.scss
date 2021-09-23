@@ -1,0 +1,108 @@
+@import 'reset';
+@import 'vars';
+@import './fonts/geomanist/600.css';
+@import './fonts/geomanist/400.css';
+
+html {
+  overflow: -moz-scrollbars-none;
+}
+
+body {
+  font-family: 'geomanist', sans-serif;
+  // background: url("../../static/lightpaperfibers.png");
+  background-color: #191b19;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #dddee0;
+  user-select: none;
+  // overscroll-behavior-y: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+  cursor: url('/close.svg') 15 15, auto;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.curtains-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideIn {
+  animation-name: slideIn;
+  animation-fill-mode: both;
+  // animation-timing-function: ease-out;
+}
+
+@keyframes slideInText {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInText {
+  animation-name: slideInText;
+  animation-fill-mode: both;
+  // animation-timing-function: ease-out;
+}
+
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/
