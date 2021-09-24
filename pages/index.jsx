@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Prismic from 'prismic-javascript';
 import { NextSeo } from 'next-seo';
+import styled from 'styled-components';
 
 //________ Utils ________
 import { Client } from 'utils/prismicHelpers';
@@ -13,7 +14,14 @@ import {
 
 //________ Components + Layout ________
 import DefaultLayout from 'layouts';
-import { HeroLogo, VideoPlayer, PicturesGrid, Manifeste } from 'components';
+import {
+  HeroLogo,
+  VideoPlayer,
+  PicturesGrid,
+  Manifeste,
+  KintsugEat,
+  Contact,
+} from 'components';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -29,6 +37,8 @@ const HomePage = ({ doc, preview }) => {
         <DefaultLayout preview={preview}>
           <HeroLogo />
           <Manifeste />
+          <KintsugEat />
+          <Contact />
         </DefaultLayout>
       </>
     );

@@ -11,12 +11,12 @@ html {
 body {
   font-family: 'geomanist', sans-serif;
   // background: url("../../static/lightpaperfibers.png");
-  // background-color: #111212;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 18, 18, 1) 0%,
-    rgba(40, 42, 41, 1) 100%
-  );
+  background-color: #111212;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(17, 18, 18, 1) 0%,
+  //   rgba(40, 42, 41, 1) 100%
+  // );
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
@@ -126,6 +126,117 @@ body::-webkit-scrollbar {
 
 .manTitle-5 {
   clip-path: url(#clip-path);
+}
+////////////KINTSUGEAT TITLE////////
+
+.kintsugeat-1 {
+  fill: #fff;
+}
+
+.kintsugeat-2 {
+  fill: #dba607;
+}
+
+////////////CONTACT TITLE////////
+
+.contactTitle-1 {
+  fill: #fff;
+}
+
+.contactTitle-2 {
+  fill: #dba607;
+}
+
+// locomotive scroll CSS
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction='horizontal'] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction='horizontal'] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction='horizontal'] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction='horizontal'] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction='horizontal'] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+
+.progress-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
 }
 
 ////////////MANIFESTE////////
@@ -293,7 +404,7 @@ body::-webkit-scrollbar {
 
 @keyframes slideIn {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 50px, 0);
     opacity: 0;
     visibility: visible;
   }

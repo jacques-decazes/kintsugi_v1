@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 //________ Utils ________
@@ -26,9 +27,9 @@ const Manifeste = () => {
           className='images-item'
         >
           <motion.img
-            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-            animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-            transition={{ ease: 'easeInOut', duration: 1, delay: 0.5 }}
+            initial={{ scale: 1.1, y: 50, clipPath: 'inset(100% 0% 0% 0%)' }}
+            animate={{ scale: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)' }}
+            transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.5 }}
             src='/jpg/head-1.jpg'
             alt='head kintsugi 1'
           />
@@ -40,9 +41,9 @@ const Manifeste = () => {
           className='images-item'
         >
           <motion.img
-            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-            animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-            transition={{ ease: 'easeInOut', duration: 1, delay: 0.5 }}
+            initial={{ scale: 1.1, y: 50, clipPath: 'inset(100% 0% 0% 0%)' }}
+            animate={{ scale: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)' }}
+            transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.5 }}
             src='/jpg/head-2.jpg'
             alt='head kintsugi 1'
           />
@@ -54,9 +55,9 @@ const Manifeste = () => {
           className='images-item'
         >
           <motion.img
-            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-            animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-            transition={{ ease: 'easeInOut', duration: 1, delay: 0.5 }}
+            initial={{ scale: 1.1, y: 50, clipPath: 'inset(100% 0% 0% 0%)' }}
+            animate={{ scale: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)' }}
+            transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.5 }}
             src='/jpg/head-3.jpg'
             alt='head kintsugi 1'
           />
@@ -68,9 +69,9 @@ const Manifeste = () => {
           className='images-item'
         >
           <motion.img
-            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-            animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-            transition={{ ease: 'easeInOut', duration: 1, delay: 0.5 }}
+            initial={{ scale: 1.1, y: 50, clipPath: 'inset(100% 0% 0% 0%)' }}
+            animate={{ scale: 1, y: 0, clipPath: 'inset(0% 0% 0% 0%)' }}
+            transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.5 }}
             src='/jpg/head-4.jpg'
             alt='head kintsugi 1'
           />
@@ -89,38 +90,93 @@ const Manifeste = () => {
         <div className='text-title'>
           <ManifesteTitle />
         </div>
-        <p>
-          KINTSUGI. Le génie de cette tradition japonaise consiste à réparer à
-          l'or les fêlures de la céramique pour en faire un objet dont la beauté
-          vient de la mise en évidence des traces de l'histoire.
-        </p>
-        <p>
-          Tel un objet symbolique au cœur d'un monde fragmenté, les marques
-          écartelées par les transformations du monde sont confrontées à des
-          ruptures de sens qui risquent de les briser.
-        </p>
-        <p>
-          S'inspirant de cette tradition, nous nous engageons à les reconsidérer
-          dans leur globalité pour identifier la faille qui va devenir la ligne
-          de force.
-        </p>
-        <p>
-          L'agence LET'S BE* explore l'essence de la marque en décomposant la
-          manière dont les publics donnent du sens à leurs expériences pour
-          refonder la plateforme de marque.
-        </p>
-        <p>
-          L'agence KINTSUGI déploie l'univers de la marque, de l'identité aux
-          outils de communication.
-        </p>
-        <p>
-          Réparée à l'or, la marque fidèle à son essence, renouvelée dans son
-          existence surprend dès lors ses publics par son audace et sa capacité
-          à ouvrir des nouvelles voies.
-        </p>
-        <div className='text-virgule'>
-          <Virgule />
-        </div>
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            KINTSUGI. Le génie de cette tradition japonaise consiste à réparer à
+            l'or les fêlures de la céramique pour en faire un objet dont la
+            beauté vient de la mise en évidence des traces de l'histoire.
+          </p>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            Tel un objet symbolique au cœur d'un monde fragmenté, les marques
+            écartelées par les transformations du monde sont confrontées à des
+            ruptures de sens qui risquent de les briser.
+          </p>
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            S'inspirant de cette tradition, nous nous engageons à les
+            reconsidérer dans leur globalité pour identifier la faille qui va
+            devenir la ligne de force.
+          </p>
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            L'agence LET'S BE* explore l'essence de la marque en décomposant la
+            manière dont les publics donnent du sens à leurs expériences pour
+            refonder la plateforme de marque.
+          </p>
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            L'agence KINTSUGI déploie l'univers de la marque, de l'identité aux
+            outils de communication.
+          </p>
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <p>
+            Réparée à l'or, la marque fidèle à son essence, renouvelée dans son
+            existence surprend dès lors ses publics par son audace et sa
+            capacité à ouvrir des nouvelles voies.
+          </p>
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          animateIn='slideIn'
+          offset={60}
+          duration={1}
+          animateOnce
+        >
+          <div className='text-virgule'>
+            <Virgule />
+          </div>
+        </ScrollAnimation>
+
         <em>
           *LET'S BE : agence en stratégie de marque, partenaire de l'agence
           KINTSUGI

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import styled from 'styled-components';
@@ -25,6 +25,7 @@ const Header = () => {
       setShowHeader(false);
     }
   });
+
   return (
     <StyledHeader
       initial={false}
@@ -40,10 +41,20 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <AnchorLink href='#manifesto'>Manifeste</AnchorLink>
+            <AnchorLink offset='100' href='#manifesto'>
+              Manifeste
+            </AnchorLink>
           </li>
-          <li>Vernissage</li>
-          <li>Contact</li>
+          <li>
+            <AnchorLink offset='100' href='#vernissage'>
+              Vernissage
+            </AnchorLink>
+          </li>
+          <li>
+            <AnchorLink offset='100' href='#contact'>
+              Contact
+            </AnchorLink>
+          </li>
         </ul>
       </nav>
     </StyledHeader>
@@ -64,26 +75,32 @@ const StyledHeader = styled(motion.header)`
   align-items: center;
   background-color: #111212;
   /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7); */
-  @media (max-width: 688px) {
+  @media (max-width: 768px) {
     justify-content: space-between;
+    display: none;
   }
   & svg {
     width: 8rem;
     margin-right: 2rem;
-    @media (max-width: 688px) {
+    @media (max-width: 768px) {
       width: 7rem;
+      margin-right: 0rem;
     }
   }
   & span {
     color: #54575b;
     padding: 0rem 1.2rem 0.1rem;
     display: block;
-    @media (max-width: 688px) {
+    margin-right: 2rem;
+    @media (max-width: 768px) {
       display: none;
     }
   }
 
   & nav {
+    @media (max-width: 768px) {
+      display: none;
+    }
     & ul {
       display: flex;
       margin-top: 0.4rem;
@@ -95,7 +112,7 @@ const StyledHeader = styled(motion.header)`
         letter-spacing: 0.5rem;
         font-size: 0.7rem;
         padding-bottom: 0.4rem;
-        margin-left: 2rem;
+        margin-right: 2rem;
         background: linear-gradient(
             90deg,
             transparent calc(100% / 4),

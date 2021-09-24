@@ -70,10 +70,20 @@ const HeroLogo = () => {
           transition={{ ease: 'easeOut', duration: 0.5, delay: 1 }}
         >
           <li>
-            <AnchorLink href='#manifesto'>Manifeste</AnchorLink>
+            <AnchorLink offset='100' href='#manifesto'>
+              Manifeste
+            </AnchorLink>
           </li>
-          <li>Vernissage</li>
-          <li>Contact</li>
+          <li>
+            <AnchorLink offset='100' href='#vernissage'>
+              Vernissage
+            </AnchorLink>
+          </li>
+          <li>
+            <AnchorLink offset='100' href='#contact'>
+              Contact
+            </AnchorLink>
+          </li>
         </motion.ul>
       </nav>
     </StyledSection>
@@ -84,7 +94,7 @@ const HeroLogo = () => {
 
 const StyledSection = styled(motion.section)`
   position: relative;
-  padding: 10vh 10vw;
+  padding: 5rem 10vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -95,17 +105,18 @@ const StyledSection = styled(motion.section)`
     & svg {
       width: 15vw;
       max-width: 10rem;
+      min-width: 6.5rem;
       fill: #ffffff;
     }
   }
   & .kintsugi {
     clip-path: inset(0% 0% 0% 0%) !important;
-    margin-bottom: min(4rem, 4vw);
-    margin-top: min(1.2rem, 1.2vw);
+    margin-bottom: min(4rem, 8vw);
+    margin-top: min(1rem, 3vw);
     & svg {
       max-width: 30rem;
       width: 50vw;
-      min-width: 12rem;
+      min-width: 18rem;
     }
   }
   & .paris {
@@ -113,6 +124,7 @@ const StyledSection = styled(motion.section)`
     & svg {
       width: 11vw;
       max-width: 7rem;
+      min-width: 5rem;
       fill: #ffffff;
     }
   }

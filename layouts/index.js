@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 //________ Components ________
 import PreviewAlert from './previewAlert';
