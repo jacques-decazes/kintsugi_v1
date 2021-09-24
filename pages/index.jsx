@@ -29,7 +29,6 @@ const HomePage = ({ doc, preview }) => {
         <DefaultLayout preview={preview}>
           <HeroLogo />
           <Manifeste />
-          <Manifeste />
         </DefaultLayout>
       </>
     );
