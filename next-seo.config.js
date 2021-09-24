@@ -1,16 +1,16 @@
 export default {
-  titleTemplate: `%s | Dream On`,
+  titleTemplate: `%s | Agence Kintsugi`,
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://dream-on.fr/',
-    site_name: 'Dream On',
+    url: 'https://agencekintsugi.fr/',
+    site_name: 'Agence Kintsugi',
     images: [
       {
-        url: 'https://dream-on.fr/dream-on-socialshare.jpg',
+        url: 'https://agencekintsugi.fr/kintsugi-socialshare.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dream On - Opéra national de Paris',
+        alt: 'Agence Kintsugi',
       },
     ],
   },

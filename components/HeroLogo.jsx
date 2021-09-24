@@ -9,6 +9,9 @@ import useWindowSize from 'utils/useWindowSize';
 
 //________ Assets ________
 import LogoKintsugiSmall from 'assets/svg/logo-kintsugi-small.js';
+import LogoAgenceText from 'assets/svg/logo-agence-text.js';
+import LogoParisText from 'assets/svg/logo-paris-text.js';
+
 import LogoKintsugi from 'assets/svg/logo-kintsugi.js';
 
 import { Mail, Pin } from 'assets/svg/social-icons.js';
@@ -32,16 +35,16 @@ const HeroLogo = () => {
       animate={showInfos ? { opacity: 1 } : { opacity: 0 }}
       transition={{ ease: 'easeOut', duration: 1.1 }}
     >
-      <p>
+      <div className='agence'>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.2 }}
         >
-          Agence
+          <LogoAgenceText />
         </motion.div>
-      </p>
-      <h1>
+      </div>
+      <div className='kintsugi'>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -49,19 +52,16 @@ const HeroLogo = () => {
         >
           <LogoKintsugiSmall />
         </motion.div>
-      </h1>
-      <p>
+      </div>
+      <div className='paris'>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.6 }}
         >
-          Paris
+          <LogoParisText />
         </motion.div>
-      </p>
-      {/* <h1>
-        <LogoKintsugi />
-      </h1> */}
+      </div>
 
       <nav>
         <motion.ul
@@ -70,7 +70,7 @@ const HeroLogo = () => {
           transition={{ ease: 'easeOut', duration: 0.5, delay: 1 }}
         >
           <li>
-            <AnchorLink href='#manifeste'>Manifeste</AnchorLink>
+            <AnchorLink href='#manifesto'>Manifeste</AnchorLink>
           </li>
           <li>Vernissage</li>
           <li>Contact</li>
@@ -90,25 +90,30 @@ const StyledSection = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  & p {
+  & .agence {
     clip-path: inset(0% 0% 0% 0%) !important;
-    font-weight: 200;
-    letter-spacing: 1rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    @media (max-width: 650px) {
-      font-size: 0.9rem;
-      letter-spacing: 0.8rem;
+    & svg {
+      width: 15vw;
+      max-width: 10rem;
+      fill: #ffffff;
     }
   }
-  & h1 {
+  & .kintsugi {
     clip-path: inset(0% 0% 0% 0%) !important;
-    margin-bottom: 6vh;
-    margin-top: 3vh;
+    margin-bottom: min(4rem, 4vw);
+    margin-top: min(1.2rem, 1.2vw);
     & svg {
       max-width: 30rem;
       width: 50vw;
       min-width: 12rem;
+    }
+  }
+  & .paris {
+    clip-path: inset(0% 0% 0% 0%) !important;
+    & svg {
+      width: 11vw;
+      max-width: 7rem;
+      fill: #ffffff;
     }
   }
   & nav {
@@ -120,7 +125,7 @@ const StyledSection = styled(motion.section)`
       display: flex;
       justify-content: space-evenly;
       width: 100%;
-      margin-top: 8vh;
+      margin-top: 5rem;
       @media (max-width: 1024px) {
         justify-content: space-between;
       }

@@ -40,7 +40,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <AnchorLink href='#manifeste'>Manifeste</AnchorLink>
+            <AnchorLink href='#manifesto'>Manifeste</AnchorLink>
           </li>
           <li>Vernissage</li>
           <li>Contact</li>

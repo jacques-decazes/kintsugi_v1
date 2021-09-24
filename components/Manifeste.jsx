@@ -8,6 +8,8 @@ import useWindowSize from 'utils/useWindowSize';
 
 //________ Assets ________
 import ManifesteText from 'assets/svg/manifeste-text.js';
+import ManifesteTitle from 'assets/svg/manifeste-title.js';
+import Virgule from 'assets/svg/kintsugi-virgule.js';
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -75,11 +77,54 @@ const Manifeste = () => {
         </motion.div>
       </div>
       <motion.div
+        id='manifesto'
+        className='text'
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.5 }}
       >
-        <ManifesteText />
+        <div className='text-virgule'>
+          <Virgule />
+        </div>
+        <div className='text-title'>
+          <ManifesteTitle />
+        </div>
+        <p>
+          KINTSUGI. Le génie de cette tradition japonaise consiste à réparer à
+          l'or les fêlures de la céramique pour en faire un objet dont la beauté
+          vient de la mise en évidence des traces de l'histoire.
+        </p>
+        <p>
+          Tel un objet symbolique au cœur d'un monde fragmenté, les marques
+          écartelées par les transformations du monde sont confrontées à des
+          ruptures de sens qui risquent de les briser.
+        </p>
+        <p>
+          S'inspirant de cette tradition, nous nous engageons à les reconsidérer
+          dans leur globalité pour identifier la faille qui va devenir la ligne
+          de force.
+        </p>
+        <p>
+          L'agence LET'S BE* explore l'essence de la marque en décomposant la
+          manière dont les publics donnent du sens à leurs expériences pour
+          refonder la plateforme de marque.
+        </p>
+        <p>
+          L'agence KINTSUGI déploie l'univers de la marque, de l'identité aux
+          outils de communication.
+        </p>
+        <p>
+          Réparée à l'or, la marque fidèle à son essence, renouvelée dans son
+          existence surprend dès lors ses publics par son audace et sa capacité
+          à ouvrir des nouvelles voies.
+        </p>
+        <div className='text-virgule'>
+          <Virgule />
+        </div>
+        <em>
+          *LET'S BE : agence en stratégie de marque, partenaire de l'agence
+          KINTSUGI
+        </em>
       </motion.div>
     </StyledSection>
   );
@@ -89,7 +134,7 @@ const Manifeste = () => {
 
 const StyledSection = styled(motion.section)`
   position: relative;
-  padding: 0vh 10vw 0vh;
+  padding: 0vh 10vw 10rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,7 +146,7 @@ const StyledSection = styled(motion.section)`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 8vh;
+    margin-bottom: 4rem;
 
     &-item {
       overflow: hidden;
@@ -121,8 +166,43 @@ const StyledSection = styled(motion.section)`
       }
     }
   }
-  & svg {
-    width: 80vw;
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-virgule {
+      & svg {
+        width: 0.8rem;
+        fill: #cda529;
+      }
+    }
+
+    &-title {
+      & svg {
+        width: max(20vw, 20rem);
+      }
+    }
+    & p {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      line-height: 2;
+      color: #616161;
+      margin-bottom: 2rem;
+      font-size: max(1.2vw, 1rem);
+      text-align: center;
+    }
+    & em {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.4;
+      color: #616161;
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 0.9rem;
+      text-align: center;
+    }
   }
 `;
 

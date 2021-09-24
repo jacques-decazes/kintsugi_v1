@@ -21,7 +21,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   color: #dddee0;
   user-select: none;
   // overscroll-behavior-y: none;
@@ -101,6 +101,31 @@ body::-webkit-scrollbar {
 
 .logo-small-4 {
   stroke: #cda529;
+}
+
+////////////MANIFESTE TITLE////////
+
+.manTitle-1,
+.manTitle-3 {
+  fill: none;
+}
+
+.manTitle-2 {
+  fill: #dba607;
+}
+
+.manTitle-3 {
+  stroke: #dba607;
+  stroke-miterlimit: 1;
+  stroke-width: 0.05px;
+}
+
+.manTitle-4 {
+  fill: #fff;
+}
+
+.manTitle-5 {
+  clip-path: url(#clip-path);
 }
 
 ////////////MANIFESTE////////
