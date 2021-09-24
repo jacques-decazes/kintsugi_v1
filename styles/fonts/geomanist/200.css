@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'geomanist';
+  src: url('./fonts/geomanist-light-webfont.eot') format('embedded-opentype'),
+    url('./fonts/geomanist-light-webfont.woff2') format('woff2'),
+    url('./fonts/geomanist-light-webfont.woff') format('woff'),
+    url('./fonts/geomanist-light-webfont.ttf') format('truetype'),
+    url('./fonts/geomanist-light-webfont.svg') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}

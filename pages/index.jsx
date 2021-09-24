@@ -13,7 +13,7 @@ import {
 
 //________ Components + Layout ________
 import DefaultLayout from 'layouts';
-import { InfosBanner, VideoPlayer, PicturesGrid } from 'components';
+import { HeroLogo, VideoPlayer, PicturesGrid, Manifeste } from 'components';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -27,9 +27,9 @@ const HomePage = ({ doc, preview }) => {
           description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
         />
         <DefaultLayout preview={preview}>
-          <InfosBanner />
-          <VideoPlayer content={doc.data} />
-          <PicturesGrid content={doc.data.works} />
+          <HeroLogo />
+          <Manifeste />
+          <Manifeste />
         </DefaultLayout>
       </>
     );

@@ -2,6 +2,7 @@
 @import 'vars';
 @import './fonts/geomanist/600.css';
 @import './fonts/geomanist/400.css';
+@import './fonts/geomanist/200.css';
 
 html {
   overflow: -moz-scrollbars-none;
@@ -10,7 +11,13 @@ html {
 body {
   font-family: 'geomanist', sans-serif;
   // background: url("../../static/lightpaperfibers.png");
-  background-color: #191b19;
+  // background-color: #111212;
+  background: linear-gradient(
+    180deg,
+    rgba(17, 18, 18, 1) 0%,
+    rgba(40, 42, 41, 1) 100%
+  );
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
   font-size: 1rem;
@@ -50,14 +57,213 @@ body::-webkit-scrollbar {
   position: fixed;
 }
 
-.curtains-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
+/////////LOGO////////////
+.logo-1 {
+  fill: #fff;
+}
+
+.logo-2,
+.logo-4 {
+  fill: none;
+  stroke-width: 0.05px;
+}
+
+.logo-2 {
+  stroke: #54565b;
+}
+
+.logo-3 {
+  fill: #cda529;
+}
+
+.logo-4 {
+  stroke: #cda529;
+}
+/////////LOGO-SMALL////////////
+
+.logo-small-1 {
+  fill: #fff;
+}
+
+.logo-small-2,
+.logo-small-4 {
+  fill: none;
+  stroke-width: 0.05px;
+}
+
+.logo-small-2 {
+  stroke: #54565b;
+}
+
+.logo-small-3 {
+  fill: #cda529;
+}
+
+.logo-small-4 {
+  stroke: #cda529;
+}
+
+////////////MANIFESTE////////
+
+.cls-1,
+.cls-12,
+.cls-15,
+.cls-23,
+.cls-4,
+.cls-7 {
+  fill: none;
+}
+
+.cls-2 {
+  clip-path: url(#clip-path);
+}
+
+.cls-3 {
+  fill: #cda529;
+}
+
+.cls-15,
+.cls-23,
+.cls-4 {
+  stroke: #cda529;
+}
+
+.cls-12,
+.cls-15,
+.cls-23,
+.cls-4,
+.cls-7 {
+  stroke-miterlimit: 1;
+}
+
+.cls-4,
+.cls-7 {
+  stroke-width: 0.05px;
+}
+
+.cls-13,
+.cls-5 {
+  fill: #54565b;
+}
+
+.cls-6 {
+  clip-path: url(#clip-path-2);
+}
+
+.cls-12,
+.cls-7 {
+  stroke: #54565b;
+}
+
+.cls-8 {
+  clip-path: url(#clip-path-4);
+}
+
+.cls-9 {
+  clip-path: url(#clip-path-6);
+}
+
+.cls-10 {
+  clip-path: url(#clip-path-8);
+}
+
+.cls-11 {
+  clip-path: url(#clip-path-10);
+}
+
+.cls-12,
+.cls-13 {
+  font-size: 8.63px;
+  font-family: ChronicleDeck-Bold, ChronicleDeck Bold;
+  font-weight: 700;
+}
+
+.cls-12 {
+  stroke-width: 0.1px;
+}
+
+.cls-14 {
+  clip-path: url(#clip-path-13);
+}
+
+.cls-15 {
+  stroke-width: 0px;
+}
+
+.cls-16 {
+  clip-path: url(#clip-path-17);
+}
+
+.cls-17 {
+  clip-path: url(#clip-path-19);
+}
+
+.cls-18 {
+  clip-path: url(#clip-path-21);
+}
+
+.cls-19 {
+  clip-path: url(#clip-path-23);
+}
+
+.cls-20 {
+  clip-path: url(#clip-path-25);
+}
+
+.cls-21 {
+  clip-path: url(#clip-path-27);
+}
+
+.cls-22 {
+  clip-path: url(#clip-path-32);
+}
+
+.cls-23 {
+  stroke-width: 0px;
+}
+
+.cls-24 {
+  clip-path: url(#clip-path-36);
+}
+
+.cls-25 {
+  clip-path: url(#clip-path-38);
+}
+
+.cls-26 {
+  clip-path: url(#clip-path-41);
+}
+
+.cls-27 {
+  clip-path: url(#clip-path-43);
+}
+
+.cls-28 {
+  clip-path: url(#clip-path-45);
+}
+
+.cls-29 {
+  clip-path: url(#clip-path-47);
+}
+
+.cls-30 {
+  clip-path: url(#clip-path-50);
+}
+
+.cls-31 {
+  clip-path: url(#clip-path-52);
+}
+
+.cls-32 {
+  clip-path: url(#clip-path-56);
+}
+
+.cls-33 {
+  clip-path: url(#clip-path-60);
+}
+
+.cls-34 {
+  clip-path: url(#clip-path-64);
 }
 
 @keyframes slideIn {
