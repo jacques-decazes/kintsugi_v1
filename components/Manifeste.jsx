@@ -149,10 +149,6 @@ const Manifeste = () => {
                 capacité à ouvrir des nouvelles voies.
               </p>
             </div>
-
-            <div className='text-virgule'>
-              <Virgule />
-            </div>
           </motion.div>
         </StyledSection>
       )}
