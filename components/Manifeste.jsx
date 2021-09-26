@@ -113,7 +113,12 @@ const Manifeste = () => {
               <p className='bloc-text-left' data-scroll data-scroll-speed={0}>
                 L'agence LET'S BE* explore l'essence de la marque en décomposant
                 la manière dont les publics donnent du sens à leurs expériences
-                pour refonder la plateforme de marque.
+                pour refonder la plateforme de marque. <br />
+                <br />
+                <em>
+                  *LET'S BE : agence en stratégie de marque, partenaire de
+                  l'agence KINTSUGI
+                </em>
               </p>
             </div>
 
@@ -148,11 +153,6 @@ const Manifeste = () => {
             <div className='text-virgule'>
               <Virgule />
             </div>
-
-            <em>
-              *LET'S BE : agence en stratégie de marque, partenaire de l'agence
-              KINTSUGI
-            </em>
           </motion.div>
         </StyledSection>
       )}
@@ -218,6 +218,14 @@ const StyledSection = styled(motion.section)`
         width: 60%;
         text-align: left;
         margin-left: 2rem;
+        & em {
+          text-transform: none;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          color: #808080;
+          font-style: italic;
+          font-size: 0.8rem;
+          text-align: center;
+        }
       }
       &-text-left-small {
         width: 40%;
@@ -235,22 +243,22 @@ const StyledSection = styled(motion.section)`
       &-virgule-left {
         position: absolute;
         bottom: 8rem;
-        left: -3rem;
+        left: -2rem;
         z-index: 9;
-        width: 4.5rem;
+        width: 3rem;
         &-big {
           position: absolute;
-          width: 7rem;
-          left: -4rem;
+          width: 5rem;
+          left: -3rem;
         }
       }
 
       &-virgule-right {
         position: absolute;
         bottom: 8rem;
-        right: -3rem;
+        right: -2rem;
         z-index: 9;
-        width: 4.5rem;
+        width: 3.5rem;
       }
       &-img-big {
         overflow: hidden;
@@ -268,15 +276,6 @@ const StyledSection = styled(motion.section)`
           height: 100%;
         }
       }
-    }
-    & em {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      line-height: 1.4;
-      color: #808080;
-      margin-top: 2rem;
-      font-style: italic;
-      font-size: 0.9rem;
-      text-align: center;
     }
   }
 `;

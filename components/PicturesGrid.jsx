@@ -6,12 +6,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { InView } from 'react-intersection-observer';
 
-//________ Context ________
-import {
-  useGlobalDispatchContext,
-  useGlobalStateContext,
-} from 'context/GlobalContextProvider';
-
 /////////////////////////// styled components /////////////////////////////////////
 
 const StyledSection = styled.section`

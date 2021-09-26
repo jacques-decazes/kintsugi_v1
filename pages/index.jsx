@@ -6,12 +6,6 @@ import styled from 'styled-components';
 //________ Utils ________
 import { Client } from 'utils/prismicHelpers';
 
-//________ Context ________
-import {
-  useGlobalStateContext,
-  useGlobalDispatchContext,
-} from 'context/GlobalContextProvider';
-
 //________ Components + Layout ________
 import DefaultLayout from 'layouts';
 import {

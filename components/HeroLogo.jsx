@@ -6,8 +6,8 @@ import { use100vh } from 'react-div-100vh';
 import { InView } from 'react-intersection-observer';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-//________ Utils ________
-import useWindowSize from 'utils/useWindowSize';
+//________ Context ________
+import useStore from 'context/store';
 
 //________ Assets ________
 import LogoKintsugiSmall from 'assets/svg/logo-kintsugi-small.js';
@@ -22,6 +22,7 @@ import { Mail, Pin } from 'assets/svg/social-icons.js';
 
 const HeroLogo = () => {
   const height = use100vh();
+  const { introTime } = useStore();
 
   return (
     <StyledSection id='home' height={height} data-scroll-section>
@@ -37,7 +38,11 @@ const HeroLogo = () => {
               <motion.img
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: 'easeInOut', duration: 0.5, delay: 0 }}
+                transition={{
+                  ease: 'easeInOut',
+                  duration: 0.5,
+                  delay: introTime,
+                }}
                 className='head'
                 src='/png/head_dore.png'
                 alt='kintsugi head'
@@ -46,7 +51,11 @@ const HeroLogo = () => {
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.2 }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.5,
+                    delay: 0.2 + introTime,
+                  }}
                 >
                   <LogoAgenceText />
                 </motion.div>
@@ -55,7 +64,11 @@ const HeroLogo = () => {
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.4 }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.5,
+                    delay: 0.4 + introTime,
+                  }}
                 >
                   <img src='/png/logo-kintsugi.png' alt='logo kintsugi' />
                 </motion.div>
@@ -64,7 +77,11 @@ const HeroLogo = () => {
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.6 }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.5,
+                    delay: 0.6 + introTime,
+                  }}
                 >
                   <LogoParisText />
                 </motion.div>
@@ -73,7 +90,11 @@ const HeroLogo = () => {
             <StyledDownArrow
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ ease: 'easeInOut', duration: 0.5 }}
+              transition={{
+                ease: 'easeInOut',
+                duration: 0.5,
+                delay: introTime,
+              }}
             >
               <motion.p
                 animate={{
