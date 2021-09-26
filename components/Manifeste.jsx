@@ -234,7 +234,7 @@ const StyledSection = styled(motion.section)`
       }
       &-virgule-left {
         position: absolute;
-        bottom: 3rem;
+        bottom: 8rem;
         left: -3rem;
         z-index: 9;
         width: 4.5rem;
@@ -247,7 +247,7 @@ const StyledSection = styled(motion.section)`
 
       &-virgule-right {
         position: absolute;
-        bottom: 3rem;
+        bottom: 8rem;
         right: -3rem;
         z-index: 9;
         width: 4.5rem;

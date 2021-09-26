@@ -23,6 +23,7 @@ const DefaultLayout = ({ children, preview, doc }) => {
         class: 'is-reveal',
         getDirection: true,
         lerp: 0.1,
+        offset: ['-20%', 0],
 
         // ... all available Locomotive Scroll instance options
       }}

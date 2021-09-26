@@ -25,50 +25,71 @@ const HeroLogo = () => {
 
   return (
     <StyledSection id='home' height={height} data-scroll-section>
-      <InView threshold={0.5}>
+      <InView threshold={0.4}>
         {({ inView, ref, entry }) => (
-          <motion.div
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ ease: 'easeInOut', duration: 0.8 }}
-            className='bloc-logo'
-            ref={ref}
-          >
-            <motion.img
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ ease: 'easeInOut', duration: 0.5, delay: 0 }}
-              className='head'
-              src='/png/head_dore.png'
-              alt='kintsugi head'
-            />
-            <div className='agence'>
-              <motion.div
+          <>
+            <motion.div
+              animate={{ opacity: inView ? 1 : 0 }}
+              transition={{ ease: 'easeInOut', duration: 0.8 }}
+              className='bloc-logo'
+              ref={ref}
+            >
+              <motion.img
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.2 }}
+                transition={{ ease: 'easeInOut', duration: 0.5, delay: 0 }}
+                className='head'
+                src='/png/head_dore.png'
+                alt='kintsugi head'
+              />
+              <div className='agence'>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.2 }}
+                >
+                  <LogoAgenceText />
+                </motion.div>
+              </div>
+              <div className='kintsugi'>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.4 }}
+                >
+                  <img src='/png/logo-kintsugi.png' alt='logo kintsugi' />
+                </motion.div>
+              </div>
+              <div className='paris'>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.6 }}
+                >
+                  <LogoParisText />
+                </motion.div>
+              </div>
+            </motion.div>
+            <StyledDownArrow
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ ease: 'easeInOut', duration: 0.5 }}
+            >
+              <motion.p
+                animate={{
+                  opacity: [0, 1, 1, 1, 1, 1, 1, 1, 0],
+                  y: [-15, 0, 0, 0, 0, 0, 0, 0, 15],
+                }}
+                transition={{
+                  ease: 'easeInOut',
+                  duration: 2.5,
+                  repeat: Infinity,
+                }}
               >
-                <LogoAgenceText />
-              </motion.div>
-            </div>
-            <div className='kintsugi'>
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.4 }}
-              >
-                <img src='/png/logo-kintsugi.png' alt='logo kintsugi' />
-              </motion.div>
-            </div>
-            <div className='paris'>
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: 'easeInOut', duration: 0.5, delay: 0.6 }}
-              >
-                <LogoParisText />
-              </motion.div>
-            </div>
-          </motion.div>
+                ↓
+              </motion.p>
+            </StyledDownArrow>
+          </>
         )}
       </InView>
 
@@ -187,5 +208,19 @@ const StyledSection = styled(motion.section)`
       }
     }
   }
+`;
+const StyledDownArrow = styled(motion.div)`
+  position: absolute;
+  bottom: 2rem;
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: #e1c379;
+  border: 1px solid #e1e1e1;
+  transition: 0.5s ease-out 0.5s;
+  line-height: 48px;
+  text-align: center;
+  opacity: 1;
 `;
 export default HeroLogo;
