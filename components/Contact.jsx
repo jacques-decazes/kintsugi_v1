@@ -18,7 +18,7 @@ const Contact = () => {
   const { height } = useWindowSize();
 
   return (
-    <StyledSection>
+    <StyledSection data-scroll-section>
       <motion.div
         id='contact'
         className='contact'
@@ -26,71 +26,34 @@ const Contact = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.5 }}
       >
-        <ScrollAnimation
-          animateIn='slideIn'
-          offset={60}
-          duration={1}
-          animateOnce
-        >
-          <div className='contact-virgule'>
-            <Virgule />
-          </div>
-        </ScrollAnimation>
+        <div className='contact-virgule'>
+          <img src='/png/virgule.png' alt='virgule kintsugi' />
+        </div>
 
-        <ScrollAnimation
-          animateIn='slideIn'
-          offset={60}
-          duration={1}
-          animateOnce
-        >
-          <div className='contact-title'>
-            <ContactTitle />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn='slideIn'
-          offset={60}
-          duration={1}
-          animateOnce
-        >
-          <div className='contact-bloc'>
-            <img src='/png/head_dore.png' alt='' />
-            <div className='contact-bloc-infos'>
-              <p>
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ ease: 'easeOut', duration: 0.5, delay: 0.5 }}
+        <div className='contact-title'>
+          <ContactTitle />
+        </div>
+
+        <div className='contact-bloc'>
+          <div className='contact-bloc-infos'>
+            <p>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ ease: 'easeOut', duration: 0.5, delay: 0.5 }}
+              >
+                <Mail />
+                <a
+                  href='mailto:contact@agencekintsugi.fr'
+                  target='_blank'
+                  rel='noreferrer'
                 >
-                  <Mail />
-                  <a
-                    href='mailto:contact@agencekintsugi.fr'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    contact@agencekintsugi.fr
-                  </a>
-                </motion.div>
-              </p>
-              <p>
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ ease: 'easeOut', duration: 0.5, delay: 0.4 }}
-                >
-                  <Pin />
-                  <a
-                    href='https://www.google.fr/maps/place/18+Rue+Oberkampf,+75011+Paris/@48.863301,2.367132,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66dfda77b6c11:0x412795f164c593c!8m2!3d48.8632975!4d2.3693207'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    18 rue Oberkampf 75011 Paris
-                  </a>
-                </motion.div>
-              </p>
-            </div>
+                  contact@agencekintsugi.fr
+                </a>
+              </motion.div>
+            </p>
           </div>
-        </ScrollAnimation>
+        </div>
       </motion.div>
     </StyledSection>
   );
@@ -118,9 +81,8 @@ const StyledSection = styled(motion.section)`
     width: 100%;
 
     &-virgule {
-      & svg {
-        width: 0.8rem;
-        fill: #cda529;
+      & img {
+        width: 1.5rem;
       }
     }
 
@@ -158,7 +120,6 @@ const StyledSection = styled(motion.section)`
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: -2rem;
         @media (max-width: 768px) {
           align-items: center;
           margin-top: 0rem;
