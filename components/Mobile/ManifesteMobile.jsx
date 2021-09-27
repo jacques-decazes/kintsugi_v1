@@ -55,8 +55,7 @@ const ManifesteMobile = () => {
   return (
     <InView threshold={0.1}>
       {({ inView, ref, entry }) => (
-        <StyledSection
-          data-scroll-section
+        <StyledSectionMobile
           ref={ref}
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ ease: 'easeInOut', duration: 0.8 }}
@@ -137,7 +136,7 @@ const ManifesteMobile = () => {
               </p>
             </div>
           </motion.div>
-        </StyledSection>
+        </StyledSectionMobile>
       )}
     </InView>
   );
@@ -145,7 +144,7 @@ const ManifesteMobile = () => {
 
 /////////////////////////// styled components /////////////////////////////////////
 
-const StyledSection = styled(motion.section)`
+const StyledSectionMobile = styled(motion.section)`
   position: relative;
   padding: 5rem 8vw 10rem;
   width: 100%;
@@ -217,7 +216,7 @@ const StyledSection = styled(motion.section)`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 42vh;
+    height: 22rem;
     width: 100%;
     &-background {
       position: relative;

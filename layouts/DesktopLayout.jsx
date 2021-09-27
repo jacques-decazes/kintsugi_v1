@@ -32,26 +32,15 @@ const DesktopLayout = ({ children, preview, doc }) => {
       <ContentContainer data-scroll-container ref={containerRef}>
         {children}
       </ContentContainer>
-      <StyledLoading
-        initial={{ opacity: 1, scale: 1 }}
-        animate={{ opacity: 0, scale: 0.8 }}
-        transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.8 }}
-      >
-        <motion.img
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ ease: 'easeInOut', duration: 0.6 }}
-          src='/gif/preload.gif'
-          alt='preloader kintsugi'
-        />
-      </StyledLoading>
     </LocomotiveScrollProvider>
   );
 };
 
 /////////////////////////// styled components /////////////////////////////////////
 
-const ContentContainer = styled(motion.main)``;
+const ContentContainer = styled.main`
+  height: 100%;
+`;
 
 const StyledLoading = styled(motion.div)`
   position: fixed;

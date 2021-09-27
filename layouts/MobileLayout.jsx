@@ -13,28 +13,16 @@ const MobileLayout = ({ children, preview, doc }) => {
 
   return (
     <>
-      <ContentContainer>{children}</ContentContainer>
-      <StyledLoading
-        height={height}
-        initial={{ opacity: 1, scale: 1 }}
-        animate={{ opacity: 0, scale: 0.8 }}
-        transition={{ ease: 'easeInOut', duration: 0.5, delay: 1.8 }}
-      >
-        <motion.img
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ ease: 'easeInOut', duration: 1 }}
-          src='/gif/preload.gif'
-          alt='preloader kintsugi'
-        />
-      </StyledLoading>
+      <MobileContainer height={height}>{children}</MobileContainer>
     </>
   );
 };
 
 /////////////////////////// styled components /////////////////////////////////////
 
-const ContentContainer = styled(motion.main)``;
+const MobileContainer = styled.main`
+  height: ${(props) => `${props.height}px`};
+`;
 
 const StyledLoading = styled(motion.div)`
   position: fixed;

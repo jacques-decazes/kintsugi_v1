@@ -35,7 +35,7 @@ const HeroLogo = () => {
               className='bloc-logo'
               ref={ref}
             >
-              <motion.img
+              <motion.video
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
@@ -44,8 +44,13 @@ const HeroLogo = () => {
                   delay: introTime,
                 }}
                 className='head'
-                src='/png/head_dore.png'
-                alt='kintsugi head'
+                autoPlay
+                muted
+                playsInline
+                loop
+                crossOrigin='anonymous'
+                src='/mp4/preload.mp4'
+                type='video/mp4'
               />
               <div className='agence'>
                 <motion.div
@@ -160,10 +165,10 @@ const StyledSection = styled(motion.section)`
     align-items: center;
     justify-content: center;
     & .head {
-      width: 10vw;
-      max-width: 7rem;
-      min-width: 4rem;
-      margin-bottom: min(3rem, 4vw);
+      width: 20vw;
+      max-width: 13rem;
+      min-width: 6rem;
+      /* margin-bottom: min(3rem, 4vw); */
     }
     & .agence {
       clip-path: inset(0% 0% 0% 0%) !important;

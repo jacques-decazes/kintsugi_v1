@@ -25,7 +25,7 @@ const HeroLogoMobile = () => {
   const { introTime } = useStore();
 
   return (
-    <StyledSection id='home' height={height} data-scroll-section>
+    <StyledSection id='home' height={height}>
       <InView threshold={0.4}>
         {({ inView, ref, entry }) => (
           <>

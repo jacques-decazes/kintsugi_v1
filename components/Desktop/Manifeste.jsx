@@ -53,18 +53,11 @@ const Manifeste = () => {
               className='bloc'
             >
               <img
-                src='/png/virgule.png'
-                alt='virgule'
-                className='bloc-virgule-left'
-                data-scroll
-                data-scroll-speed={4}
-              />
-              <img
                 className='bloc-img'
                 src='/jpg/head-1.jpg'
                 alt='head kintsugi 1'
                 data-scroll
-                data-scroll-speed={1}
+                data-scroll-speed={0.5}
               />
               <p className='bloc-text-left' data-scroll data-scroll-speed={0}>
                 Tel un objet symbolique au cœur d'un monde fragmenté, les
@@ -84,14 +77,7 @@ const Manifeste = () => {
                 src='/jpg/head-2.jpg'
                 alt='head kintsugi 2'
                 data-scroll
-                data-scroll-speed={1}
-              />
-              <img
-                src='/png/virgule.png'
-                alt='virgule'
-                className='bloc-virgule-right'
-                data-scroll
-                data-scroll-speed={4}
+                data-scroll-speed={0.5}
               />
             </div>
 
@@ -101,15 +87,9 @@ const Manifeste = () => {
                 src='/jpg/head-3.jpg'
                 alt='head kintsugi 3'
                 data-scroll
-                data-scroll-speed={1}
+                data-scroll-speed={0.5}
               />
-              <img
-                src='/png/virgule.png'
-                alt='virgule'
-                className='bloc-virgule-left'
-                data-scroll
-                data-scroll-speed={4}
-              />
+
               <p className='bloc-text-left' data-scroll data-scroll-speed={0}>
                 L'agence LET'S BE* explore l'essence de la marque en décomposant
                 la manière dont les publics donnent du sens à leurs expériences
@@ -133,14 +113,7 @@ const Manifeste = () => {
                 src='/jpg/head-4.jpg'
                 alt='head kintsugi 4'
                 data-scroll
-                data-scroll-speed={1}
-              />
-              <img
-                src='/png/virgule.png'
-                alt='virgule'
-                className='bloc-virgule-left-big'
-                data-scroll
-                data-scroll-speed={4}
+                data-scroll-speed={0.5}
               />
               <p className='bloc-text-left-small'>
                 Réparée à l'or,
@@ -166,6 +139,9 @@ const StyledSection = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1200px) {
+    padding: 5rem 10vw 10rem;
+  }
 
   & .images {
     width: 100%;
@@ -203,15 +179,16 @@ const StyledSection = styled(motion.section)`
       margin: 2rem 0;
       font-size: max(1.2vw, 1rem);
       text-align: center;
+      letter-spacing: 0.15rem;
     }
     & .bloc {
       position: relative;
-      margin: 2rem 0;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       &-text-left {
-        width: 60%;
+        width: 65%;
         text-align: left;
         margin-left: 2rem;
         & em {
@@ -221,10 +198,11 @@ const StyledSection = styled(motion.section)`
           font-style: italic;
           font-size: 0.8rem;
           text-align: center;
+          letter-spacing: 0.1rem;
         }
       }
       &-text-left-small {
-        width: 40%;
+        width: 50%;
         text-align: left;
         margin-left: 2rem;
       }
@@ -234,7 +212,7 @@ const StyledSection = styled(motion.section)`
         margin-right: 2rem;
       }
       &-img {
-        width: 40%;
+        width: 30%;
       }
       &-virgule-left {
         position: absolute;
@@ -258,7 +236,7 @@ const StyledSection = styled(motion.section)`
       }
       &-img-big {
         overflow: hidden;
-        width: 60%;
+        width: 45%;
         margin-bottom: 2%;
         background-color: #cda529;
         display: flex;

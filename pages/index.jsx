@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import Prismic from 'prismic-javascript';
-import { isMobile, isDesktop } from 'react-device-detect';
+import {
+  BrowserView,
+  MobileView,
+  isDesktop,
+  isMobile,
+} from 'react-device-detect';
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
@@ -22,28 +27,33 @@ import {
 ///////////////////////////////////////////////////////////////////////////////////
 
 const HomePage = ({ doc, preview }) => {
-  console.log(doc);
+  console.log(isDesktop);
   if (doc && doc.data) {
     return (
       <>
-        <NextSeo
-          title='Accueil'
-          description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
-        />
-        {isDesktop && (
+        <BrowserView renderWithFragment>
+          <NextSeo
+            title='Accueil'
+            description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
+          />
           <DesktopLayout>
             <HeroLogo />
             <Manifeste />
             <Contact />
           </DesktopLayout>
-        )}
-        {isMobile && (
+        </BrowserView>
+
+        <MobileView renderWithFragment>
+          <NextSeo
+            title='Accueil'
+            description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
+          />
           <MobileLayout>
             <HeroLogoMobile />
             <ManifesteMobile />
             <ContactMobile />
           </MobileLayout>
-        )}
+        </MobileView>
       </>
     );
   }
