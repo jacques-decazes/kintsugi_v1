@@ -1,17 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-
-//________ Utils ________
-import useWindowSize from 'utils/useWindowSize';
-
-//________ Assets ________
-import ManifesteText from 'assets/svg/manifeste-text.js';
-import ManifesteTitle from 'assets/svg/manifeste-title.js';
-import Virgule from 'assets/svg/kintsugi-virgule.js';
 
 ////////////////////////////////////////////////////////////////////////////////////
 

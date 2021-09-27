@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-
-//________ Utils ________
-import useWindowSize from 'utils/useWindowSize';
-
-//________ Assets ________
-import { Mail, Pin } from 'assets/svg/social-icons.js';
-import ContactTitle from 'assets/svg/contact-title.js';
-import Virgule from 'assets/svg/kintsugi-virgule.js';
 
 ////////////////////////////////////////////////////////////////////////////////////
 
 const Contact = () => {
-  const { height } = useWindowSize();
-
   return (
     <StyledSection data-scroll-section>
       <motion.div
@@ -29,10 +17,6 @@ const Contact = () => {
         <div className='contact-virgule'>
           <img src='/png/virgule.png' alt='virgule kintsugi' />
         </div>
-
-        {/* <div className='contact-title'>
-          <ContactTitle />
-        </div> */}
 
         <motion.div className='contact-mail'>
           <a

@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  target: 'experimental-serverless-trace',
+  target: 'serverless',
   webpack(config) {
     config.resolve.modules.push(path.resolve('./'));
     config.module.rules.push({

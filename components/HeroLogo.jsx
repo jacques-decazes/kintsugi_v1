@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { use100vh } from 'react-div-100vh';
 import { InView } from 'react-intersection-observer';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 //________ Context ________
 import useStore from 'context/store';
 
 //________ Assets ________
-import LogoKintsugiSmall from 'assets/svg/logo-kintsugi-small.js';
 import LogoAgenceText from 'assets/svg/logo-agence-text.js';
 import LogoParisText from 'assets/svg/logo-paris-text.js';
-
-import LogoKintsugi from 'assets/svg/logo-kintsugi.js';
-
-import { Mail, Pin } from 'assets/svg/social-icons.js';
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,31 +111,6 @@ const HeroLogo = () => {
           </>
         )}
       </InView>
-
-      {/* 
-      <nav>
-        <motion.ul
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ ease: 'easeOut', duration: 0.5, delay: 1 }}
-        >
-          <li>
-            <AnchorLink offset='100' href='#manifesto'>
-              Manifeste
-            </AnchorLink>
-          </li>
-          <li>
-            <AnchorLink offset='100' href='#vernissage'>
-              Vernissage
-            </AnchorLink>
-          </li>
-          <li>
-            <AnchorLink offset='100' href='#contact'>
-              Contact
-            </AnchorLink>
-          </li>
-        </motion.ul>
-      </nav> */}
     </StyledSection>
   );
 };
