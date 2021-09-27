@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://dream-on.fr',
+  siteUrl: 'https://agencekintsugi.fr',
   generateRobotsTxt: true, // (optional)
   // ...other options
 };

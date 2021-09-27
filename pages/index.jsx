@@ -1,21 +1,23 @@
 import React, { useEffect } from 'react';
 import Prismic from 'prismic-javascript';
+import { isMobile, isDesktop } from 'react-device-detect';
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
 //________ Utils ________
 import { Client } from 'utils/prismicHelpers';
 
-//________ Components + Layout ________
-import DefaultLayout from 'layouts';
+//________ Components + Layout Desktop ________
+import DesktopLayout from 'layouts/DesktopLayout';
+import { HeroLogo, Manifeste, Contact } from 'components/Desktop';
+
+//________ Components + Layout Mobile ________
+import MobileLayout from 'layouts/MobileLayout';
 import {
-  HeroLogo,
-  VideoPlayer,
-  PicturesGrid,
-  Manifeste,
-  KintsugEat,
-  Contact,
-} from 'components';
+  HeroLogoMobile,
+  ManifesteMobile,
+  ContactMobile,
+} from 'components/Mobile';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -28,11 +30,20 @@ const HomePage = ({ doc, preview }) => {
           title='Accueil'
           description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
         />
-        <DefaultLayout preview={preview}>
-          <HeroLogo />
-          <Manifeste />
-          <Contact />
-        </DefaultLayout>
+        {isDesktop && (
+          <DesktopLayout>
+            <HeroLogo />
+            <Manifeste />
+            <Contact />
+          </DesktopLayout>
+        )}
+        {isMobile && (
+          <MobileLayout>
+            <HeroLogoMobile />
+            <ManifesteMobile />
+            <ContactMobile />
+          </MobileLayout>
+        )}
       </>
     );
   }

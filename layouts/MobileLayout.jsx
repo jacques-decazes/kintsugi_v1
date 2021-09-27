@@ -1,40 +1,19 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { use100vh } from 'react-div-100vh';
 
 //________ Components ________
 import PreviewAlert from './previewAlert';
-import { Header, Footer } from 'components';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-const DefaultLayout = ({ children, preview, doc }) => {
-  const containerRef = useRef(null);
+const MobileLayout = ({ children, preview, doc }) => {
   const height = use100vh();
 
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        class: 'is-reveal',
-        getDirection: true,
-        lerp: 0.1,
-        offset: ['-20%', 0],
-
-        // ... all available Locomotive Scroll instance options
-      }}
-      watch={
-        [
-          //...all the dependencies you want to watch to update the scroll
-        ]
-      }
-      containerRef={containerRef}
-    >
-      <ContentContainer data-scroll-container ref={containerRef}>
-        {children}
-      </ContentContainer>
+    <>
+      <ContentContainer>{children}</ContentContainer>
       <StyledLoading
         height={height}
         initial={{ opacity: 1, scale: 1 }}
@@ -44,12 +23,12 @@ const DefaultLayout = ({ children, preview, doc }) => {
         <motion.img
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ ease: 'easeInOut', duration: 0.6 }}
+          transition={{ ease: 'easeInOut', duration: 1 }}
           src='/gif/preload.gif'
           alt='preloader kintsugi'
         />
       </StyledLoading>
-    </LocomotiveScrollProvider>
+    </>
   );
 };
 
@@ -70,9 +49,9 @@ const StyledLoading = styled(motion.div)`
   align-items: center;
   justify-content: center;
   & img {
-    width: 30%;
+    width: 60%;
     mix-blend-mode: lighten;
   }
 `;
 
-export default DefaultLayout;
+export default MobileLayout;
