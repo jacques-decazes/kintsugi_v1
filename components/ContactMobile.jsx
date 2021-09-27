@@ -14,7 +14,7 @@ import Virgule from 'assets/svg/kintsugi-virgule.js';
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-const ContactMobile = () => {
+const Contact = () => {
   const { height } = useWindowSize();
 
   return (
@@ -85,7 +85,7 @@ const StyledSection = styled(motion.section)`
       }
     }
     &-mail {
-      margin-top: 5rem;
+      margin-top: 4rem;
       & a {
         cursor: pointer;
         font-weight: 400;
@@ -110,4 +110,4 @@ const StyledSection = styled(motion.section)`
   }
 `;
 
-export default ContactMobile;
+export default Contact;

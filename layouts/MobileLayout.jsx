@@ -13,16 +13,16 @@ const MobileLayout = ({ children, preview, doc }) => {
 
   return (
     <>
-      <MobileContainer height={height}>{children}</MobileContainer>
+      <MobileContainer className='mobile' height={height}>
+        {children}
+      </MobileContainer>
     </>
   );
 };
 
 /////////////////////////// styled components /////////////////////////////////////
 
-const MobileContainer = styled.main`
-  height: ${(props) => `${props.height}px`};
-`;
+const MobileContainer = styled.main``;
 
 const StyledLoading = styled(motion.div)`
   position: fixed;

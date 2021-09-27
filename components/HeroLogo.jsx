@@ -25,7 +25,7 @@ const HeroLogo = () => {
   const { introTime } = useStore();
 
   return (
-    <StyledSection id='home' height={height} data-scroll-section>
+    <StyledSection height={height} data-scroll-section>
       <InView threshold={0.4}>
         {({ inView, ref, entry }) => (
           <>
@@ -167,7 +167,7 @@ const StyledSection = styled(motion.section)`
     & .head {
       width: 20vw;
       max-width: 13rem;
-      min-width: 6rem;
+      min-width: 9rem;
       /* margin-bottom: min(3rem, 4vw); */
     }
     & .agence {

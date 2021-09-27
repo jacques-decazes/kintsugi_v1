@@ -17,35 +17,21 @@ import Virgule from 'assets/svg/kintsugi-virgule.js';
 
 const BlocImage = ({ number }) => {
   return (
-    <InView threshold={0.5} triggerOnce>
+    <InView threshold={0.5}>
       {({ inView, ref, entry }) => (
-        <motion.div className='bloc-image' ref={ref}>
-          <motion.div
-            animate={{
-              clipPath: inView ? 'inset(0% 0% 0% 0%)' : 'inset(100% 0% 0% 0%)',
-            }}
-            transition={{
-              ease: 'easeInOut',
-              duration: 0.5,
-            }}
-            className='bloc-image-background'
-          />
-          <motion.img
-            animate={{
-              clipPath: inView ? 'inset(0% 0% 0% 0%)' : 'inset(100% 0% 0% 0%)',
-              scale: inView ? 1 : 1.1,
-              y: inView ? 0 : 20,
-            }}
-            transition={{
-              ease: 'easeInOut',
-              duration: 0.5,
-              delay: 0.6,
-            }}
-            className='bloc-image-img'
-            src={`/jpg/head-${number}.jpg`}
-            alt={`head kintsugi ${number}`}
-          />
-        </motion.div>
+        <motion.img
+          ref={ref}
+          animate={{
+            opacity: inView ? 1 : 0,
+          }}
+          transition={{
+            ease: 'easeInOut',
+            duration: 0.7,
+          }}
+          className='bloc-image'
+          src={`/jpg/head-${number}.jpg`}
+          alt={`head kintsugi ${number}`}
+        />
       )}
     </InView>
   );
@@ -61,7 +47,6 @@ const ManifesteMobile = () => {
           transition={{ ease: 'easeInOut', duration: 0.8 }}
         >
           <motion.div
-            id='manifesto'
             className='text'
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -146,7 +131,7 @@ const ManifesteMobile = () => {
 
 const StyledSectionMobile = styled(motion.section)`
   position: relative;
-  padding: 5rem 8vw 10rem;
+  padding: 5rem 10vw 10rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -177,7 +162,7 @@ const StyledSectionMobile = styled(motion.section)`
     &-title {
       margin: 2rem 0;
       & img {
-        width: max(20vw, 20rem);
+        width: max(20vw, 16rem);
       }
     }
     & p {
@@ -187,8 +172,9 @@ const StyledSectionMobile = styled(motion.section)`
       line-height: 2;
       color: #d5d5d5;
       margin: 2rem 0;
-      font-size: max(1.2vw, 1rem);
+      font-size: max(1.2vw, 0.8rem);
       text-align: center;
+      letter-spacing: 0.15rem;
     }
     & em {
       text-transform: none;
@@ -209,27 +195,7 @@ const StyledSectionMobile = styled(motion.section)`
     }
   }
   & .bloc-image {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    clip-path: inset(0% 0% 0% 0%);
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 22rem;
     width: 100%;
-    &-background {
-      position: relative;
-      background-color: #e5c161;
-      width: 100%;
-      height: 100%;
-    }
-    &-img {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      object-fit: cover;
-    }
   }
 `;
 

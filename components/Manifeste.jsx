@@ -26,7 +26,6 @@ const Manifeste = () => {
           transition={{ ease: 'easeInOut', duration: 0.8 }}
         >
           <motion.div
-            id='manifesto'
             className='text'
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

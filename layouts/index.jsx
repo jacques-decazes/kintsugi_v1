@@ -1,14 +1,17 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import {
+  BrowserView,
+  MobileView,
+  isDesktop,
+  isMobile,
+} from 'react-device-detect';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-
-//________ Components ________
-import PreviewAlert from './previewAlert';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-const DesktopLayout = ({ children, preview, doc }) => {
+const DefaultLayout = ({ children, preview, doc }) => {
   const containerRef = useRef(null);
 
   return (
@@ -38,9 +41,7 @@ const DesktopLayout = ({ children, preview, doc }) => {
 
 /////////////////////////// styled components /////////////////////////////////////
 
-const ContentContainer = styled.main`
-  height: 100%;
-`;
+const ContentContainer = styled.main``;
 
 const StyledLoading = styled(motion.div)`
   position: fixed;
@@ -60,4 +61,4 @@ const StyledLoading = styled(motion.div)`
   }
 `;
 
-export default DesktopLayout;
+export default DefaultLayout;

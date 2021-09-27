@@ -1,59 +1,43 @@
 import React, { useEffect } from 'react';
 import Prismic from 'prismic-javascript';
-import {
-  BrowserView,
-  MobileView,
-  isDesktop,
-  isMobile,
-} from 'react-device-detect';
+
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
 //________ Utils ________
 import { Client } from 'utils/prismicHelpers';
+import useDeviceDetect from 'utils/useDeviceDetect';
 
-//________ Components + Layout Desktop ________
-import DesktopLayout from 'layouts/DesktopLayout';
-import { HeroLogo, Manifeste, Contact } from 'components/Desktop';
-
-//________ Components + Layout Mobile ________
-import MobileLayout from 'layouts/MobileLayout';
+//________ Components + Layout  ________
+import DefaultLayout from 'layouts';
 import {
-  HeroLogoMobile,
+  HeroLogo,
+  Manifeste,
   ManifesteMobile,
+  Contact,
   ContactMobile,
-} from 'components/Mobile';
+} from 'components';
 
 ///////////////////////////////////////////////////////////////////////////////////
 
 const HomePage = ({ doc, preview }) => {
-  console.log(isDesktop);
+  const { isMobile } = useDeviceDetect();
+
+  console.log(isMobile);
   if (doc && doc.data) {
     return (
       <>
-        <BrowserView renderWithFragment>
-          <NextSeo
-            title='Accueil'
-            description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
-          />
-          <DesktopLayout>
-            <HeroLogo />
-            <Manifeste />
-            <Contact />
-          </DesktopLayout>
-        </BrowserView>
-
-        <MobileView renderWithFragment>
-          <NextSeo
-            title='Accueil'
-            description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
-          />
-          <MobileLayout>
-            <HeroLogoMobile />
-            <ManifesteMobile />
-            <ContactMobile />
-          </MobileLayout>
-        </MobileView>
+        <NextSeo
+          title='Accueil'
+          description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
+        />
+        <DefaultLayout>
+          <HeroLogo />
+          {!isMobile && <Manifeste />}
+          {isMobile && <ManifesteMobile />}
+          {!isMobile && <Contact />}
+          {isMobile && <ContactMobile />}
+        </DefaultLayout>
       </>
     );
   }
