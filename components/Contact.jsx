@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+//_______ Assets________
+import { Instagram } from 'assets/svg/social-icons.js';
 ////////////////////////////////////////////////////////////////////////////////////
 
 const Contact = () => {
   return (
     <StyledSection data-scroll-section>
       <motion.div
-        id='contact'
         className='contact'
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -18,15 +19,24 @@ const Contact = () => {
           <img src='/png/virgule.png' alt='virgule kintsugi' />
         </div>
 
-        <motion.div className='contact-mail'>
+        <div className='contact-infos'>
           <a
+            className='contact-infos-insta'
+            href='https://www.instagram.com/agencekintsugi/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Instagram />
+          </a>
+          <a
+            className='contact-infos-mail'
             href='mailto:contact@agencekintsugi.fr'
             target='_blank'
             rel='noreferrer'
           >
             contact@agencekintsugi.fr
           </a>
-        </motion.div>
+        </div>
       </motion.div>
     </StyledSection>
   );
@@ -68,9 +78,23 @@ const StyledSection = styled(motion.section)`
         width: max(14vw, 14rem);
       }
     }
-    &-mail {
+    &-infos {
       margin-top: 4rem;
-      & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-insta {
+        margin-right: 3rem;
+        & svg {
+          fill: #a5a5a5;
+          width: 2rem;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover > svg {
+          fill: #ffffff;
+        }
+      }
+      &-mail {
         cursor: pointer;
         font-weight: 400;
         color: #a5a5a5;

@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+//_______ Assets________
+import { Instagram } from 'assets/svg/social-icons.js';
+
 ////////////////////////////////////////////////////////////////////////////////////
 
 const Contact = () => {
@@ -18,15 +21,24 @@ const Contact = () => {
           <img src='/png/virgule.png' alt='virgule kintsugi' />
         </div>
 
-        <motion.div className='contact-mail'>
+        <div className='contact-infos'>
           <a
+            className='contact-infos-insta'
+            href='https://www.instagram.com/agencekintsugi/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Instagram />
+          </a>
+          <a
+            className='contact-infos-mail'
             href='mailto:contact@agencekintsugi.fr'
             target='_blank'
             rel='noreferrer'
           >
             contact
           </a>
-        </motion.div>
+        </div>
       </motion.div>
     </StyledSection>
   );
@@ -65,9 +77,23 @@ const StyledSection = styled(motion.section)`
         width: max(14vw, 14rem);
       }
     }
-    &-mail {
+    &-infos {
       margin-top: 4rem;
-      & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-insta {
+        margin-right: 2.5rem;
+        & svg {
+          fill: #ffffff;
+          width: 2rem;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover > svg {
+          fill: #ffffff;
+        }
+      }
+      &-mail {
         cursor: pointer;
         font-weight: 400;
         color: #ffffff;

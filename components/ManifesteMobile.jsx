@@ -89,10 +89,6 @@ const ManifesteMobile = () => {
                 la manière dont les publics donnent du sens à leurs expériences
                 pour refonder la plateforme de marque.
               </p>
-              <em>
-                *LET'S BE : agence en stratégie de marque, partenaire de
-                l'agence KINTSUGI
-              </em>
             </div>
 
             <p>
@@ -110,6 +106,10 @@ const ManifesteMobile = () => {
                 capacité à ouvrir des nouvelles voies.
               </p>
             </div>
+            <em>
+              *LET'S BE : agence en stratégie de marque, partenaire de l'agence
+              KINTSUGI
+            </em>
           </motion.div>
         </StyledSectionMobile>
       )}
