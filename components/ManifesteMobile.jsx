@@ -121,7 +121,7 @@ const ManifesteMobile = () => {
 
 const StyledSectionMobile = styled(motion.section)`
   position: relative;
-  padding: 5rem 10vw 10rem;
+  padding: 5rem 10vw 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -145,14 +145,14 @@ const StyledSectionMobile = styled(motion.section)`
 
     &-virgule {
       & img {
-        width: 1.5rem;
+        width: 1rem;
       }
     }
 
     &-title {
-      margin: 2rem 0;
+      margin: 2rem 0 0;
       & img {
-        width: max(20vw, 16rem);
+        width: 10rem;
       }
     }
     & p {

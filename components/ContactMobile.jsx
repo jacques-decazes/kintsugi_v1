@@ -36,15 +36,12 @@ const Contact = () => {
 
 const StyledSection = styled(motion.section)`
   position: relative;
-  padding: 0vh 10vw 20vh;
+  padding: 0vh 10vw 10rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 768px) {
-    padding: 0vh 10vw 10rem;
-  }
 
   & .contact {
     display: flex;
@@ -55,7 +52,7 @@ const StyledSection = styled(motion.section)`
 
     &-virgule {
       & img {
-        width: 1.5rem;
+        width: 1rem;
       }
     }
 

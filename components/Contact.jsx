@@ -55,7 +55,7 @@ const StyledSection = styled(motion.section)`
 
     &-virgule {
       & img {
-        width: 1.5rem;
+        width: 1rem;
       }
     }
 

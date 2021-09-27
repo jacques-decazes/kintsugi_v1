@@ -84,10 +84,6 @@ const Manifeste = () => {
                 la manière dont les publics donnent du sens à leurs expériences
                 pour refonder la plateforme de marque. <br />
                 <br />
-                <em>
-                  *LET'S BE : agence en stratégie de marque, partenaire de
-                  l'agence KINTSUGI
-                </em>
               </p>
             </div>
 
@@ -111,6 +107,10 @@ const Manifeste = () => {
                 capacité à ouvrir des nouvelles voies.
               </p>
             </div>
+            <em>
+              *LET'S BE : agence en stratégie de marque, partenaire de l'agence
+              KINTSUGI
+            </em>
           </motion.div>
         </StyledSection>
       )}
@@ -149,14 +149,16 @@ const StyledSection = styled(motion.section)`
 
     &-virgule {
       & img {
-        width: 1.5rem;
+        width: 1rem;
       }
     }
 
     &-title {
       margin: 2rem 0;
       & img {
-        width: max(20vw, 20rem);
+        max-width: 14rem;
+        width: 14vw;
+        min-width: 9rem;
       }
     }
     & p {
@@ -170,6 +172,16 @@ const StyledSection = styled(motion.section)`
       text-align: center;
       letter-spacing: 0.15rem;
     }
+    & em {
+      text-transform: none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #808080;
+      font-style: italic;
+      font-size: 0.8rem;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      margin-top: 2rem;
+    }
     & .bloc {
       position: relative;
       margin: 0;
@@ -180,15 +192,6 @@ const StyledSection = styled(motion.section)`
         width: 65%;
         text-align: left;
         margin-left: 2rem;
-        & em {
-          text-transform: none;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-          color: #808080;
-          font-style: italic;
-          font-size: 0.8rem;
-          text-align: center;
-          letter-spacing: 0.1rem;
-        }
       }
       &-text-left-small {
         width: 50%;
