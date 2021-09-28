@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 //_______ Assets________
 import { Instagram } from 'assets/svg/social-icons.js';
+
 ////////////////////////////////////////////////////////////////////////////////////
 
 const Contact = () => {

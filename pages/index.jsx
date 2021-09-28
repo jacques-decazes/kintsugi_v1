@@ -24,7 +24,8 @@ const HomePage = () => {
     <>
       <NextSeo
         title='Accueil'
-        description='Branding, storytelling, advertising. The best agency to support small and medium-sized companies'
+        description='Faire des lignes de faille des lignes de force. L’agence Kintsugi répare les marques. À l’or.
+        Plateforme de marque, identité visuelle et supports de communication.'
       />
       <DefaultLayout>
         <HeroLogo />
